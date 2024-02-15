@@ -13,6 +13,7 @@ WHITE = pygame.Color(255, 255, 255)
 RED = pygame.Color(255, 0, 0)
 GREEN = pygame.Color(0, 255, 0)
 BLUE = pygame.Color(0, 0, 255)
+DARK_GREEN = pygame.Color(1, 50, 32)
 
 # Initialising pygame
 pygame.init()
@@ -92,7 +93,8 @@ while running:
 
     # Refresh game screen
     window.fill(BLACK)
-    for snake_element in snake:
+    pygame.draw.rect(window, DARK_GREEN, [snake[0][1] * 10, snake[0][0] * 10, 10, 10])
+    for snake_element in snake[1:]:
         pygame.draw.rect(window, GREEN, [snake_element[1] * 10, snake_element[0] * 10, 10, 10])
     pygame.draw.rect(window, RED, [apple[1] * 10, apple[0] * 10, 10, 10])
     window.blit(pygame.font.SysFont(None, 25).render(str(score), True, WHITE), (10, 10))
