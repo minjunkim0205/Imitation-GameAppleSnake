@@ -75,7 +75,7 @@ while running:
                 snake_booster = False
 
     # Snake, Apple
-    if time - snake_time > snake_tick or snake_booster:
+    if time - snake_time >= snake_tick or snake_booster:
         snake.insert(0, [snake[0][0] + snake_direction[0], snake[0][1] + snake_direction[1]])
         if apple in snake:
             score += 500
