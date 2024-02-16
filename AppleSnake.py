@@ -52,6 +52,8 @@ while running:
 
     # Key event
     for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_UP:
                 if snake_direction != direction["down"]:
@@ -69,7 +71,6 @@ while running:
                 snake_booster = True
             if event.key == pygame.K_ESCAPE:
                 running = False
-
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_SPACE:
                 snake_booster = False
