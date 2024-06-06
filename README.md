@@ -2,7 +2,7 @@
 
 ## Preview
 
-![Preview](Preview.png)
+![Preview](./Preview.png)
 
 ## Introduction
 
@@ -10,11 +10,4 @@
 
 ## Requirements
 
-> 프로젝트에 필요한 환경.
-
-* **Environment**
-    * Windows
-
-* **Package**
-    * Pygame\
-      ``` pip install pygame ```
+> [requirements.txt](./requirements.txt)
